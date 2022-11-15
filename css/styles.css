@@ -7,8 +7,8 @@
   --black-text-color-logo: #000000;
   --buttons-and-bg-color: #f5f4fa;
   --hero-button-active: #188ce8;
-  --hero-bg-color: #C4C4C4;
-  --svg-color: #AFB1B8;
+  --hero-bg-color: #c4c4c4;
+  --svg-color: #afb1b8;
 }
 
 body {
@@ -34,8 +34,6 @@ ul {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-
-  outline: 1px solid red;
 }
 
 .list {
@@ -122,23 +120,6 @@ ul {
   fill: currentColor;
 }
 
-/* ----------------------------------------links footer----------------- */
-
-.contacts .link {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-.contacts .highlighter {
-  color: var(--text-and-primary-bg-white-color);
-}
-.site-nav .link.current,
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
-}
-
 /* ------------------------------------------------hero------------- */
 
 .hero {
@@ -150,12 +131,13 @@ ul {
 .overlay {
   margin-left: auto;
   margin-right: auto;
-  
+
   max-width: 1600px;
   height: 600px;
   background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)),
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../images/hero-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,7 +333,7 @@ ul {
   justify-content: center;
   gap: 10px;
 }
-.social-network {  
+.social-network {
   width: 44px;
   height: 44px;
   color: var(--svg-color);
@@ -368,8 +350,8 @@ ul {
   color: var(--text-and-primary-bg-white-color);
   fill: var(--svg-color);
 }
-.social-network>.icon:hover,
-.social-network>.icon:focus {
+.social-network > .icon:hover,
+.social-network > .icon:focus {
   fill: currentColor;
   background-color: var(--accent-color);
 }
@@ -398,18 +380,39 @@ ul {
   border: 1px solid var(--svg-color);
   border-radius: 4px;
   fill: var(--svg-color);
- }
+}
 .icon-client:hover,
 .icon-client:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
-/* --------------------------------------------підлога------------- */
+/* --------------------------------------------футер------------------ */
 
 .floor {
   background-color: var(--second-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.floor .container {
+  display: flex;
+}
+.floor-center {
+  margin-left: 70px;
+}
+.floor .icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--text-and-primary-bg-white-color);
+}
+.join {
+  display: block;
+  margin-bottom: 20px;
+  padding-top: 12px;
+  color: var(--text-and-primary-bg-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .white-studio {
   color: var(--text-and-primary-bg-white-color);
@@ -421,10 +424,28 @@ ul {
 .floor .item-contacts + .item-contacts {
   margin-top: 9px;
 }
+/* ----------------------------------------links footer----------------- */
 
-/* --------------------------------page Portfolio-------- */
+.contacts .link {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
 
-/* ----------------------------------фільтр------------------ */
+.contacts .highlighter {
+  color: var(--text-and-primary-bg-white-color);
+}
+
+.site-nav .link.current,
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+/* --------------------------------page Portfolio--------------------- */
+
+/* ----------------------------------фільтр--------------------------- */
 .buttons {
   display: flex;
   justify-content: center;
@@ -432,6 +453,12 @@ ul {
 }
 .buttons .item + .item {
   margin-left: 8px;
+}
+.buttons .button:hover,
+.buttons .button:focus {
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* ----------------------------портфоліо картки-------------------- */
 .portfolio .set-card {
@@ -442,7 +469,8 @@ ul {
 .portfolio-card {
   flex-basis: calc((100% - 60px) / 3);
 }
-.portfolio-link {
+.link-portfolio {
+  display: block;
   text-decoration: none;
 }
 .portfolio .card-foot {
@@ -454,7 +482,7 @@ ul {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
-.portfolio-title {
+.title-portfolio {
   margin-bottom: 4px;
 
   color: var(--title-text-color);
@@ -462,8 +490,12 @@ ul {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-text {
+.text-portfolio {
   color: var(--primary-text-color);
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+.link-portfolio:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
